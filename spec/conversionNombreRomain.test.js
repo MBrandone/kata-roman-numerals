@@ -3,6 +3,7 @@ const convertir = require("../convertirVersNombreRomain")
 describe("conversion en nombre romain", () => {
 
   describe("Unités", () => {
+
     test("devrait convertir 1 en I", () => {
       expect(convertir(1)).toEqual("I")
     })
@@ -38,11 +39,13 @@ describe("conversion en nombre romain", () => {
     test("devrait convertir 9 en IX", () => {
       expect(convertir(9)).toEqual("IX")
     })
+
   })
 
   describe("Dizaines", () => {
 
     describe("10", () => {
+
       test("devrait convertir 10 en X", () => {
         expect(convertir(10)).toEqual("X")
       })
@@ -74,6 +77,7 @@ describe("conversion en nombre romain", () => {
     })
 
     describe("20", () => {
+
       test("devrait convertir 20 en XX", () => {
         expect(convertir(20)).toEqual("XX")
       })
@@ -89,9 +93,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 29 en XXIX", () => {
         expect(convertir(29)).toEqual("XXIX")
       })
+
     })
 
     describe("30", () => {
+
       test("devrait convertir 31 en XX", () => {
         expect(convertir(31)).toEqual("XXXI")
       })
@@ -103,9 +109,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 37 en XXV", () => {
         expect(convertir(37)).toEqual("XXXVII")
       })
+
     })
 
     describe("40", () => {
+
       test("devrait convertir 40 en XL", () => {
         expect(convertir(40)).toEqual("XL")
       })
@@ -121,9 +129,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 49 en XLIV", () => {
         expect(convertir(49)).toEqual("XLIX")
       })
+
     })
 
     describe("50", () => {
+
       test("devrait convertir 50 en L", () => {
         expect(convertir(50)).toEqual("L")
       })
@@ -139,9 +149,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 57 en XLIV", () => {
         expect(convertir(57)).toEqual("LVII")
       })
+
     })
 
     describe("60", () => {
+
       test("devrait convertir 60 en LX", () => {
         expect(convertir(60)).toEqual("LX")
       })
@@ -149,9 +161,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 66 en LXVI", () => {
         expect(convertir(66)).toEqual("LXVI")
       })
+
     })
 
     describe("70", () => {
+
       test("devrait convertir 70 en LXX", () => {
         expect(convertir(70)).toEqual("LXX")
       })
@@ -159,9 +173,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 73 en LXXIII", () => {
         expect(convertir(73)).toEqual("LXXIII")
       })
+
     })
 
     describe("80", () => {
+
       test("devrait convertir 80 en LXXX", () => {
         expect(convertir(80)).toEqual("LXXX")
       })
@@ -169,9 +185,11 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 89 en LXXIII", () => {
         expect(convertir(89)).toEqual("LXXXIX")
       })
+
     })
 
     describe("90", () => {
+
       test("devrait convertir 90 en XC", () => {
         expect(convertir(90)).toEqual("XC")
       })
@@ -179,6 +197,7 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 92 en LXXIII", () => {
         expect(convertir(92)).toEqual("XCII")
       })
+
     })
   })
 
@@ -205,6 +224,7 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 194 en CI", () => {
         expect(convertir(194)).toEqual("CXCIV")
       })
+
     })
 
     describe("200", () => {
@@ -220,6 +240,7 @@ describe("conversion en nombre romain", () => {
       test("devrait convertir 279 en CCLXXIX", () => {
         expect(convertir(279)).toEqual("CCLXXIX")
       })
+
     })
 
     describe("300", () => {
@@ -245,7 +266,96 @@ describe("conversion en nombre romain", () => {
       })
 
     })
+
+    describe("500", () => {
+
+      test("devrait convertir 555 en DLV", () => {
+        expect(convertir(555)).toEqual("DLV")
+      })
+
+      test("devrait convertir 567 en DLXVII", () => {
+        expect(convertir(567)).toEqual("DLXVII")
+      })
+
+    })
+
+    describe("700", () => {
+
+      test("devrait convertir 708 en DCCVIII", () => {
+        expect(convertir(708)).toEqual("DCCVIII")
+      })
+
+      test("devrait convertir 769 en DCCLXXIX", () => {
+        expect(convertir(769)).toEqual("DCCLXIX")
+      })
+
+    })
+
+    describe("900", () => {
+
+      test("devrait convertir 914 en CMXIV", () => {
+        expect(convertir(914)).toEqual("CMXIV")
+      })
+
+      test("devrait convertir 993 en CMXCIII", () => {
+        expect(convertir(993)).toEqual("CMXCIII")
+      })
+
+    })
   })
 
+  describe("Milliers", () => {
 
+    describe("1000", () => {
+
+      test("devrait convertir 1000 en M", () => {
+        expect(convertir(1000)).toEqual("M")
+      })
+
+      test("devrait convertir 1001 en MI", () => {
+        expect(convertir(1001)).toEqual("MI")
+      })
+
+      test("devrait convertir 1241 en MCCXLI", () => {
+        expect(convertir(1241)).toEqual("MCCXLI")
+      })
+
+      test("devrait convertir 1559 en MDLIX", () => {
+        expect(convertir(1559)).toEqual("MDLIX")
+      })
+
+      test("devrait convertir 1940 en MCMXL", () => {
+        expect(convertir(1940)).toEqual("MCMXL")
+      })
+
+    })
+
+    describe("2000", () => {
+
+      test("devrait convertir 2000 en CC", () => {
+        expect(convertir(2000)).toEqual("MM")
+      })
+
+      test("devrait convertir 2428 en MMCDXXVIII", () => {
+        expect(convertir(2428)).toEqual("MMCDXXVIII")
+      })
+
+      test("devrait convertir 2792 en MMDCCXCII", () => {
+        expect(convertir(2792)).toEqual("MMDCCXCII")
+      })
+
+    })
+
+    describe("3000", () => {
+
+      test("devrait convertir 3000 en MMM", () => {
+        expect(convertir(3000)).toEqual("MMM")
+      })
+
+      test("devrait convertir 3999 en MMMCMXCIX", () => {
+        expect(convertir(3999)).toEqual("MMMCMXCIX")
+      })
+
+    })
+  })
 })
